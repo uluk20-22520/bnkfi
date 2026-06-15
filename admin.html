@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BNK Finance — панель заявок</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="admin-body">
+  <header class="header">
+    <a class="logo" href="index.html"><span class="logo-mark">BNK</span><span class="logo-text">Finance</span></a>
+    <a class="btn btn-glass" href="index.html">← На сайт</a>
+  </header>
+  <main class="admin-main">
+    <section class="admin-panel">
+      <span class="section-kicker">CRM</span>
+      <h1>Панель заявок</h1>
+      <p class="empty-state">Введите ADMIN_TOKEN из переменных окружения сервера. По умолчанию в локальной разработке: <b>change-me</b>.</p>
+      <div class="admin-controls">
+        <input id="token" type="password" placeholder="ADMIN_TOKEN" />
+        <button class="btn btn-primary" id="loadBtn" type="button">Загрузить заявки</button>
+      </div>
+      <div id="adminStatus" class="empty-state"></div>
+      <div id="tableWrap"></div>
+    </section>
+  </main>
+  <script>
+    const nf = new Intl.NumberFormat('ru-RU');
+    const statusEl = document.getElementById('adminStatus');
+    const tableWrap = document.getElementById('tableWrap');
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+    }
+    async function loadApplications() {
+      const token = document.getElementById('token').value.trim();
+      statusEl.textContent = 'Загрузка...';
+      tableWrap.innerHTML = '';
+      try {
+        const response = await fetch('/api/applications?token=' + encodeURIComponent(token));
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Ошибка загрузки');
+        if (!data.items.length) {
+          statusEl.textContent = 'Заявок пока нет.';
+          return;
+        }
+        statusEl.textContent = `Найдено заявок: ${data.items.length}`;
+        tableWrap.innerHTML = `<table class="app-table"><thead><tr><th>Дата</th><th>ФИО</th><th>Телефон</th><th>Тип</th><th>Сумма</th><th>Город</th><th>Комментарий</th></tr></thead><tbody>${data.items.map((item) => `<tr><td>${escapeHtml(new Date(item.createdAt).toLocaleString('ru-RU'))}</td><td>${escapeHtml(item.fullName)}</td><td>${escapeHtml(item.phone)}</td><td>${escapeHtml(item.loanType)}</td><td>${nf.format(Number(item.amount || 0))} сом</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.comment)}</td></tr>`).join('')}</tbody></table>`;
+      } catch (error) {
+        statusEl.textContent = error.message;
+      }
+    }
+    document.getElementById('loadBtn').addEventListener('click', loadApplications);
+  </script>
+</body>
+</html>

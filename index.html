@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#e30613" />
+  <title>BNK Finance — современные финансовые решения</title>
+  <meta name="description" content="BNK Finance: ипотека, автокредит и МСБ кредиты. Быстрая онлайн-заявка, прозрачные условия и удобный сервис." />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <span class="blur blur-a"></span>
+    <span class="blur blur-b"></span>
+    <span class="beam beam-a"></span>
+    <span class="beam beam-b"></span>
+  </div>
+
+  <header class="header" id="top">
+    <a class="logo" href="#top" aria-label="BNK Finance">
+      <span class="logo-mark">BNK</span><span class="logo-text">Finance</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#calculator" data-i18n="nav.calculator">Калькулятор</a>
+      <a href="#application" data-i18n="nav.application">Заявка</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Выбор языка">
+        <button class="lang-btn active" data-lang="ru" type="button" aria-label="Русский">🇷🇺</button>
+        <button class="lang-btn" data-lang="kg" type="button" aria-label="Кыргызча">🇰🇬</button>
+      </div>
+      <button class="burger" type="button" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span><b data-i18n="hero.eyebrow">Быстро · Удобно · Надёжно</b></div>
+        <h1 id="hero-title" data-i18n-html="hero.title">Современные <span>финансовые</span> решения</h1>
+        <p data-i18n="hero.subtitle">Технологичный сервис, скорость и прозрачность для клиентов в Кыргызстане.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#application"><span data-i18n="hero.cta">Перейти</span><i aria-hidden="true">→</i></a>
+          <a class="btn btn-glass" href="#calculator" data-i18n="hero.calc">Рассчитать платёж</a>
+        </div>
+        <div class="trust-row" aria-label="Преимущества">
+          <div><strong>15 мин</strong><span data-i18n="hero.trust1">на заявку</span></div>
+          <div><strong>3</strong><span data-i18n="hero.trust2">вида кредита</span></div>
+          <div><strong>24/7</strong><span data-i18n="hero.trust3">онлайн-доступ</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1" aria-hidden="true">
+        <div class="glass-card service-card float-card card-mortgage">
+          <span class="icon-line">⌂</span>
+          <div><h3 data-i18n="cards.mortgage">Ипотека</h3><p data-i18n="cards.mortgageText">Удобные условия для приобретения жилья</p></div>
+        </div>
+        <div class="glass-card service-card float-card card-business">
+          <span class="icon-line">▣</span>
+          <div><h3 data-i18n="cards.business">МСБ Кредиты</h3><p data-i18n="cards.businessText">Финансовая поддержка для развития бизнеса</p></div>
+        </div>
+        <div class="glass-card service-card float-card card-auto">
+          <span class="icon-line">▰</span>
+          <div><h3 data-i18n="cards.auto">Автокредит</h3><p data-i18n="cards.autoText">Быстрое оформление на выгодных условиях</p></div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-top"><b data-i18n="phone.overview">Обзор</b><span>☰</span></div>
+              <div class="balance-card">
+                <span data-i18n="phone.balance">Доступный баланс</span>
+                <strong>1 250 000 c</strong>
+                <em>+12.5% <small data-i18n="phone.month">за месяц</small></em>
+                <div class="donut"><span data-i18n="phone.expense">Расход<br>780 200 c</span></div>
+              </div>
+              <div class="quick-actions">
+                <button type="button"><i>⇄</i><span data-i18n="phone.transfer">Перевод</span></button>
+                <button type="button"><i>▯</i><span data-i18n="phone.pay">Оплата</span></button>
+                <button type="button"><i>♙</i><span data-i18n="phone.topup">Пополнить</span></button>
+              </div>
+              <div class="analytics-card">
+                <div><b data-i18n="phone.analytics">Аналитика</b><span>+8.4%</span></div>
+                <svg viewBox="0 0 260 130" role="img" aria-label="Рост аналитики">
+                  <defs>
+                    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#20d28d" stop-opacity=".35"/>
+                      <stop offset="100%" stop-color="#20d28d" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="chart-area" d="M0 92 L28 90 L52 64 L78 70 L104 55 L132 60 L154 45 L184 58 L212 40 L240 34 L260 20 L260 130 L0 130 Z"/>
+                  <path class="chart-line" d="M0 92 L28 90 L52 64 L78 70 L104 55 L132 60 L154 45 L184 58 L212 40 L240 34 L260 20"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+        <span class="percent-symbol">%</span>
+      </div>
+    </section>
+
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="services.kicker">Направления</span>
+        <h2 id="services-title" data-i18n="services.title">Кредиты под разные задачи</h2>
+        <p data-i18n="services.text">Выберите продукт, рассчитайте примерный платёж и отправьте заявку онлайн.</p>
+      </div>
+      <div class="services-grid">
+        <article class="product-card reveal" data-product="Ипотека">
+          <div class="product-icon">⌂</div>
+          <h3 data-i18n="cards.mortgage">Ипотека</h3>
+          <p data-i18n="services.mortgageDesc">Подбор условий для покупки квартиры, дома или расширения жилья.</p>
+          <ul>
+            <li data-i18n="services.item1">Предварительное рассмотрение онлайн</li>
+            <li data-i18n="services.item2">Прозрачный расчёт платежа</li>
+            <li data-i18n="services.item3">Сопровождение специалиста</li>
+          </ul>
+          <button class="product-choose" type="button" data-choice="Ипотека"><span data-i18n="common.choose">Выбрать</span> →</button>
+        </article>
+        <article class="product-card reveal delay-1" data-product="Автокредит">
+          <div class="product-icon">▰</div>
+          <h3 data-i18n="cards.auto">Автокредит</h3>
+          <p data-i18n="services.autoDesc">Оформление кредита на автомобиль с понятной структурой платежей.</p>
+          <ul>
+            <li data-i18n="services.item4">Быстрая проверка заявки</li>
+            <li data-i18n="services.item5">Удобный срок кредитования</li>
+            <li data-i18n="services.item6">Консультация по документам</li>
+          </ul>
+          <button class="product-choose" type="button" data-choice="Автокредит"><span data-i18n="common.choose">Выбрать</span> →</button>
+        </article>
+        <article class="product-card reveal delay-2" data-product="МСБ Кредит">
+          <div class="product-icon">▣</div>
+          <h3 data-i18n="cards.business">МСБ Кредиты</h3>
+          <p data-i18n="services.businessDesc">Финансирование оборотных средств, оборудования и развития бизнеса.</p>
+          <ul>
+            <li data-i18n="services.item7">Индивидуальный подход</li>
+            <li data-i18n="services.item8">Для действующего бизнеса</li>
+            <li data-i18n="services.item9">Гибкая сумма и срок</li>
+          </ul>
+          <button class="product-choose" type="button" data-choice="МСБ Кредит"><span data-i18n="common.choose">Выбрать</span> →</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator" id="calculator" aria-labelledby="calculator-title">
+      <div class="calc-panel reveal">
+        <div class="calc-copy">
+          <span class="section-kicker" data-i18n="calculator.kicker">Онлайн-калькулятор</span>
+          <h2 id="calculator-title" data-i18n="calculator.title">Рассчитайте примерный платёж</h2>
+          <p data-i18n="calculator.text">Калькулятор показывает ориентировочную сумму. Точные условия специалист сообщит после рассмотрения заявки.</p>
+        </div>
+        <form class="calc-form" id="calcForm">
+          <label>
+            <span data-i18n="form.creditType">Вид кредита</span>
+            <select id="calcType">
+              <option value="mortgage" data-i18n="cards.mortgage">Ипотека</option>
+              <option value="auto" data-i18n="cards.auto">Автокредит</option>
+              <option value="business" data-i18n="cards.business">МСБ Кредиты</option>
+            </select>
+          </label>
+          <label>
+            <span><b data-i18n="calculator.amount">Сумма</b>: <output id="amountOut">1 000 000</output> c</span>
+            <input id="amountRange" type="range" min="50000" max="5000000" step="50000" value="1000000" />
+          </label>
+          <label>
+            <span><b data-i18n="calculator.term">Срок</b>: <output id="termOut">36</output> <span data-i18n="calculator.months">мес.</span></span>
+            <input id="termRange" type="range" min="6" max="120" step="1" value="36" />
+          </label>
+        </form>
+        <div class="calc-result" aria-live="polite">
+          <span data-i18n="calculator.monthly">Ежемесячный платёж</span>
+          <strong><span id="monthlyPayment">36 152</span> c</strong>
+          <small><span data-i18n="calculator.rate">Ставка</span>: <span id="rateOut">18%</span> · <span data-i18n="calculator.total">Всего</span>: <span id="totalOut">1 301 472</span> c</small>
+          <a href="#application" class="btn btn-primary small"><span data-i18n="calculator.apply">Оставить заявку</span> →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section application" id="application" aria-labelledby="application-title">
+      <div class="application-copy reveal">
+        <div class="eyebrow"><span></span><b data-i18n="application.eyebrow">Быстро · Удобно · Надёжно</b></div>
+        <h2 id="application-title" data-i18n-html="application.title">Оставьте заявку <span>на кредит</span></h2>
+        <p data-i18n="application.text">Заполните форму, и наш специалист свяжется с вами в ближайшее время.</p>
+        <div class="mini-cards" aria-hidden="true">
+          <div class="glass-card mini"><span>⌂</span><b data-i18n="cards.mortgage">Ипотека</b></div>
+          <div class="glass-card mini"><span>▰</span><b data-i18n="cards.auto">Автокредит</b></div>
+          <div class="glass-card mini"><span>▣</span><b data-i18n="cards.business">МСБ Кредиты</b></div>
+        </div>
+      </div>
+
+      <div class="form-shell reveal delay-1">
+        <div class="form-title">
+          <div class="form-icon">✎</div>
+          <div>
+            <h3 data-i18n="form.title">Заявка на кредит</h3>
+            <p data-i18n="form.subtitle">Заполните данные для предварительного рассмотрения</p>
+          </div>
+        </div>
+        <form id="loanForm" novalidate>
+          <div class="field">
+            <label for="fullName" data-i18n="form.fullName">ФИО</label>
+            <div class="input-wrap"><span>♙</span><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Введите ваше ФИО" data-i18n-placeholder="form.fullNamePh" required minlength="3" /></div>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="phone" data-i18n="form.phone">Номер телефона</label>
+            <div class="input-wrap"><span>☎</span><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+996 (___) __-__-__" required /></div>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="loanType" data-i18n="form.creditType">Вид кредита</label>
+            <div class="input-wrap"><span>▱</span>
+              <select id="loanType" name="loanType" required>
+                <option value="" data-i18n="form.chooseCredit">Выберите вид кредита</option>
+                <option value="Ипотека" data-i18n="cards.mortgage">Ипотека</option>
+                <option value="Автокредит" data-i18n="cards.auto">Автокредит</option>
+                <option value="МСБ Кредит" data-i18n="cards.business">МСБ Кредиты</option>
+              </select>
+            </div>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="amount" data-i18n="form.amount">Сумма кредита</label>
+            <div class="input-wrap"><span>▣</span><input id="amount" name="amount" inputmode="numeric" placeholder="Введите сумму кредита" data-i18n-placeholder="form.amountPh" required /><b>сом</b></div>
+            <small class="error"></small>
+          </div>
+          <div class="field two">
+            <label for="city" data-i18n="form.city">Город</label>
+            <div class="input-wrap"><span>⌖</span><input id="city" name="city" type="text" placeholder="Бишкек" data-i18n-placeholder="form.cityPh" /></div>
+            <small class="error"></small>
+          </div>
+          <div class="field two">
+            <label for="comment" data-i18n="form.comment">Комментарий</label>
+            <div class="input-wrap"><span>☰</span><input id="comment" name="comment" type="text" placeholder="Удобное время звонка" data-i18n-placeholder="form.commentPh" /></div>
+            <small class="error"></small>
+          </div>
+          <label class="check">
+            <input id="consent" type="checkbox" required checked />
+            <span data-i18n="form.consent">Я согласен на обработку персональных данных</span>
+          </label>
+          <button class="submit-btn" type="submit"><span data-i18n="form.submit">Отправить</span><i>→</i></button>
+          <p class="privacy">🛡 <span data-i18n="form.privacy">Мы гарантируем конфиденциальность ваших данных</span></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section steps" aria-labelledby="steps-title">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="steps.kicker">Процесс</span>
+        <h2 id="steps-title" data-i18n="steps.title">Как это работает</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step reveal"><span>01</span><h3 data-i18n="steps.s1">Заполните заявку</h3><p data-i18n="steps.s1t">Укажите контактные данные, вид кредита и сумму.</p></article>
+        <article class="step reveal delay-1"><span>02</span><h3 data-i18n="steps.s2">Получите консультацию</h3><p data-i18n="steps.s2t">Специалист уточнит детали и расскажет условия.</p></article>
+        <article class="step reveal delay-2"><span>03</span><h3 data-i18n="steps.s3">Подготовьте документы</h3><p data-i18n="steps.s3t">Мы подскажем список документов для рассмотрения.</p></article>
+        <article class="step reveal delay-3"><span>04</span><h3 data-i18n="steps.s4">Оформите кредит</h3><p data-i18n="steps.s4t">После одобрения финализируем условия и договор.</p></article>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="section-head reveal">
+        <span class="section-kicker">FAQ</span>
+        <h2 id="faq-title" data-i18n="faq.title">Частые вопросы</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details open>
+          <summary data-i18n="faq.q1">Заявка сразу означает одобрение кредита?</summary>
+          <p data-i18n="faq.a1">Нет. Онлайн-заявка используется для предварительной консультации и первичного рассмотрения. Точные условия зависят от документов и кредитной истории.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q2">Какие кредиты можно выбрать?</summary>
+          <p data-i18n="faq.a2">На сайте доступны три направления: ипотека, автокредит и кредиты для малого и среднего бизнеса.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q3">Куда отправляются данные формы?</summary>
+          <p data-i18n="faq.a3">При запуске через сервер заявки сохраняются в data/applications.json. При открытии файла напрямую данные сохраняются локально в браузере.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="contact-card reveal">
+        <div>
+          <span class="section-kicker" data-i18n="contacts.kicker">Связь</span>
+          <h2 id="contacts-title" data-i18n="contacts.title">Готовы обсудить условия?</h2>
+          <p data-i18n="contacts.text">Оставьте заявку на сайте или свяжитесь с BNK Finance удобным способом.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#application"><span data-i18n="contacts.apply">Оставить заявку</span> →</a>
+          <a class="btn btn-glass" href="mailto:bnkfinance.kg@gmail.com">bnkfinance.kg@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#top"><span class="logo-mark">BNK</span><span class="logo-text">Finance</span></a>
+    <p>© <span id="year"></span> BNK Finance. <span data-i18n="footer.rights">Все права защищены.</span></p>
+    <a href="admin.html" class="admin-link" data-i18n="footer.admin">Панель заявок</a>
+  </footer>
+
+  <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+      <div class="success-icon">✓</div>
+      <h3 id="modalTitle" data-i18n="modal.title">Заявка отправлена</h3>
+      <p data-i18n="modal.text">Спасибо! Специалист BNK Finance свяжется с вами в ближайшее время.</p>
+      <button type="button" class="btn btn-primary" id="modalOk" data-i18n="modal.ok">Хорошо</button>
+    </div>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+  <script src="js/app.js"></script>
+</body>
+</html>
